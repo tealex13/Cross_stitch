@@ -25,3 +25,11 @@ test('render 3 handholds', () => {
     expect(generateBoard(height, width)).toStrictEqual(handholdArray);
 
 });
+
+test('render 0 handholds', () => {
+  const height = 0;
+  const width = 0;
+  const handholdArray = [];
+    expect(generateBoard(height, width)).toStrictEqual(handholdArray);
+
+});
