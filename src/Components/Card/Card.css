@@ -1,0 +1,10 @@
+.Card{
+	position: relative;
+	top: -10vh;
+	height: 35vh;
+	width: 20vw;
+	margin: 5px;
+	background-color: white;
+	background-color: 0;
+	color: black;
+}

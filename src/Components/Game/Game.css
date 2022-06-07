@@ -1,0 +1,6 @@
+.Game{
+	display: flex;
+	background-color: blue;
+	width: 100%;
+	flex: 1;
+}

@@ -1,0 +1,9 @@
+.PlayArea{
+	display: flex;
+	flex-direction: column;
+	background-color: orange;
+	flex: 1;
+	min-width: 0;
+	min-height: 0;
+	min-height: 0;
+}

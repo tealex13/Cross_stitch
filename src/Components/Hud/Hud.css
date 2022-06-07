@@ -1,0 +1,12 @@
+.Hud{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	bottom: 4px;
+	background-color: blue;
+	height: 30vh;
+	margin-top: auto;
+	min-height: 100px;
+	overflow: visible;
+}
