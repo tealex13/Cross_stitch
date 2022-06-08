@@ -1,12 +1,10 @@
 import	'./Handhold.css';
 
 function renderHandhold(handholdData) {
+	const id = handholdData;
 	return(
-		<button className = 'Handhold'>
-		Handhol
-			<button>
-				{handholdData.id + 'handhold'}
-			</button>
+		<button className = 'Handhold'  key = {id}>
+				{id}
 		</button>
 		);
 }

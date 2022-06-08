@@ -11,7 +11,6 @@ export class Board extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = initialBoardState;
-
 	}
 
 	generateHts(numberOfHandholds){
@@ -50,6 +49,8 @@ export class Board extends React.Component{
 	}
 
 	generateBoard(height, width){
+		// const heigh = this.state.height;
+		// const width = this.state.height;
 		const totalHanholds = height*width - (height % 2);
 		let handholdId_first = 0;
 		const handholds = [];
@@ -65,16 +66,12 @@ export class Board extends React.Component{
 
 
 	render(){
-		const numberOfRows = 8;
-		const handholds = [{id: 1},{id: 2},{id: 3},{id: 4}];
-		const row = [];
-		for(let i = 0; i < handholds.length; i++){
-			row.push(handholds);
-		}
 
+		const generatedBoard = this.generateBoard(this.state.height,this.state.width);
 		const board = [];
-	    for (let i = 0; i < numberOfRows; i++){
-	      board.push(renderRow(row));
+	    for (let i = 0; i < generatedBoard.length; i++){
+	    	console.log('row to add ' + generatedBoard[i]);
+	      board.push(renderRow(generatedBoard[i]));
 	    }
 
 		return(
