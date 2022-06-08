@@ -1,11 +1,12 @@
 import	'./PlayArea.css';
-import {renderBoard} from '../Board/Board.js'
+import {Board} from '../Board/Board.js'
 import {Hud} from '../Hud/Hud.js'
 
 function PlayArea() {
+	 const localBoard = new Board;
 	return(
 		<div className = 'PlayArea'>
-		{renderBoard()}
+		{localBoard.render()}
 		{Hud()}
 		</div>
 		);
