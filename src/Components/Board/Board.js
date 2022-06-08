@@ -11,6 +11,7 @@ export class Board extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = initialBoardState;
+
 	}
 
 	generateHts(numberOfHandholds){
@@ -25,8 +26,27 @@ export class Board extends React.Component{
 		return (linArray);
 	}
 
-	mapToHhCoords (index){
-		return([0,0])
+	mapIndexToHhCoords (index){
+		let row = 0;
+		let col = 0;
+		const width = this.state.width;
+		const wDoub = 2 * width - 1;
+		const rDoub = Math.trunc(index/wDoub);
+		const colOdd = index - rDoub * wDoub; 
+		if (colOdd > width){ 
+			row = 2 * rDoub + 1;
+			col = colOdd - width; 
+		}else{
+			row = 2 * rDoub;
+			col = colOdd; 
+		}
+		
+		return([row,col])
+	}
+
+	mapHhCoordsToIndex ([row,col]){
+		const index = row * this.state.width - Math.trunc(row/2) + col;
+		return (index)
 	}
 
 	generateBoard(height, width){
