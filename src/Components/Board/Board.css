@@ -16,17 +16,6 @@
 	flex-direction: column-reverse;
 }
 
-.Appendage{
-	position: relative;
-  left: 300px;
-  top: -200px;
-  /*margin-top: -200px;*/
-  height: 100px;
-  width: 100px;
-  background-color:  #73AD21;
-  margin: 5px;
-}
-
 .AppendageStartPos{
     display: flex;
     flex-direction: row;

@@ -2,6 +2,8 @@ import React from 'react'
 import	'./Board.css';
 import {renderRow} from '../Row/Row.js'
 import {} from '../../TypeDefs/HoldType.js'
+import {Appendage} from '../Appendage/Appendage.js'
+
 
 const initialBoardState = {	
 	width: 6, 
@@ -80,12 +82,8 @@ export class Board extends React.Component{
 					{board}
 				</div>
 				<div className = 'AppendageStartPos'>
-					<div className = 'Appendage'>
-						left Hand
-					</div>
-					<div className = 'Appendage'>
-						right Hand
-					</div>
+					{Appendage()}
+					{Appendage()}
 				</div>
 			</div>
 
